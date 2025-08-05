@@ -1,0 +1,136 @@
+/* Reset & Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f7f5d9, #fde7d8, #fff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: background 0.5s ease;
+}
+
+
+/* App Container */
+.app-container {
+    background-color: #fffdfd;
+    padding: 30px 40px;
+    border-radius: 20px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 90%;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #8e6e95;
+    margin-bottom: 20px;
+}
+
+/* Input Section */
+.input-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.input-section input, 
+.input-section button {
+    padding: 12px 16px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 1rem;
+}
+
+.input-section input {
+    flex: 1;
+    min-width: 150px;
+}
+
+.input-section input:focus {
+    border-color: #c7caa0;
+    outline: none;
+}
+
+.input-section button {
+    background-color: #cac8a0;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.input-section button:hover {
+    background-color: #aeb788;
+}
+
+/* Task List */
+#task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-item {
+    background-color: #f3f5ec;
+    margin-bottom: 12px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.2s ease;
+}
+
+.task-item:hover {
+    transform: scale(1.02);
+}
+
+.task-item.completed {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+.task-details {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.task-date {
+    font-size: 0.85em;
+    color: #999;
+    margin-top: 5px;
+}
+
+/* Actions */
+.task-actions button {
+    margin-left: 8px;
+    background-color: #dde4c6;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.task-actions button:hover {
+    background-color: #c4d2a9;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .input-section {
+        flex-direction: column;
+    }
+
+    .input-section input, 
+    .input-section button {
+        width: 100%;
+    }
+}
